@@ -1,0 +1,10 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://ThomasMiconi.github.io
+title: Notes
+email: 
+author: ThomasMiconi
+description: My awesome new site
+paginate: 3
+google_analytics: 
