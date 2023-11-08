@@ -1,22 +1,139 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
 
-<div class="home">
+    <!-- Without this, it's too small on mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <style>
+   /* CSS largely taken from Sunaina Pai's Makesite.py code, with random changes. All bugs my own.
+   https://github.com/sunainapai/makesite
+   */
+   
+   body {
+    margin: 0;
+    line-height: 1.5em;
+    color: #333333;
+    font-family: helvetica, arial, sans-serif;
+}
 
-  <div class="posts">
-    {% for post in paginator.posts %}
-      <div class="post">
-        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
-          <h3 class="h2 post-title">{{ post.title }}</h3>
-          <p class="post-summary">{{ post.summary }}</p>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+/* Default HTML superscript messes with line height!*/
+sup {
+    line-height: 0;
 
-  {% include pagination.html %}
+    /* The following rules (or similar) likely come from browser 
+     * style and are not needed
+    font-size: 0.83em;
+    vertical-align: super;*/
+}
 
-  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
-</div>
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+th, td {
+  padding-right: 1em;
+  padding-left: 1em;
+  vertical-align:top;
+}
+
+
+h1 {font-size:2em;}
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    line-height: 1.2em;
+    margin-top: 1em;
+}
+
+a:link, a:visited {
+    color: #0000e0;
+    text-decoration: none
+}
+
+a:hover, a:active {
+    color: #0000ff;
+    text-decoration: underline
+}
+
+nav section, header section, main, footer section {
+/*    max-width: 45em;*/
+    max-width: 55em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 0.5em;
+}
+
+.center {text-align: center;}
+
+
+p{
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Navigation panel */
+nav {
+    background: #333333;
+    border-bottom: thin solid #111111;
+    line-height: 3em;
+}
+
+nav a {
+    margin-right: 1em;
+}
+
+nav a:link, nav a:visited {
+    color: #cccccc;
+}
+
+nav a:hover, nav a:active {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+</style>
+
+  </head>
+ 
+<body>
+
+<main>
+
+<table>
+  <tr>
+    <td>
+    <br/>
+    <br/>
+    <img src="./PhotoThomasCropped.jpeg"> </td> 
+
+<td></td>
+
+    <td>
+<h1>Thomas Miconi</h2>
+
+<p>I am a researcher in artificial intelligence and computational neuroscience, most recently at Uber AI Labs.
+
+<p>Before that, I worked at the CNRS CerCo Lab, Harvard Medical School, the Neurosciences Institute and Numenta.
+
+
+<p>
+Email: thomas.miconi at gmail dot com<br/>
+<a href="https://scholar.google.com/citations?user=EXun8woAAAAJ">List of publications on Google Scholar</a></br>
+<a href="http://twitter.com/ThomasMiconi">Twitter: @ThomasMiconi</a><br/>
+<a href="https://www.linkedin.com/in/thomas-miconi-98b1644/">LinkedIn profile</a><br/>
+
+</td>
+</tr>
+</table>
+
+</main>
+
+</body>
+</html>
